@@ -14,6 +14,7 @@ export default function convertToRomanNumerals(input: number): string {
   let result = '';
 
   const segments = [
+    new RomanNumeralSegment(50, 'L'),
     new RomanNumeralSegment(10, 'X'),
     new RomanNumeralSegment(9, 'IX'),
     new RomanNumeralSegment(5, 'V'),
