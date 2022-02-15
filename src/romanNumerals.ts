@@ -3,7 +3,8 @@ export default function convertToRomanNumerals(input: number): string {
   let result = '';
 
   if (remainder === 9) {
-    return 'IX';
+    result += 'IX';
+    remainder -= 9;
   }
 
   if (remainder >= 10) {
@@ -12,7 +13,8 @@ export default function convertToRomanNumerals(input: number): string {
   }
 
   if (remainder === 4) {
-    return 'IV';
+    result += 'IV';
+    remainder -= 4;
   }
 
   if (remainder >= 5) {

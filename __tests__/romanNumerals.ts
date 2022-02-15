@@ -27,3 +27,9 @@ test.each([
 ])('%i -> %i', (input, expected) => {
   expect(convertToRomanNumerals(input)).toBe(expected);
 });
+
+test.each([
+  [14, 'XIV'],
+])('%i -> %i', (input, expected) => {
+  expect(convertToRomanNumerals(input)).toBe(expected);
+});
