@@ -51,3 +51,15 @@ test.each([
 ])('%i -> %i', (input, expected) => {
   expect(convertToRomanNumerals(input)).toBe(expected);
 });
+
+test.each([
+  [90, 'XC'],
+  [40, 'XL'],
+  [49, 'XLIX'],
+  [400, 'CD'],
+  [490, 'CDXC'],
+  [3333, 'MMMCCCXXXIII'],
+  [999, 'CMXCIX'],
+])('%i -> %i', (input, expected) => {
+  expect(convertToRomanNumerals(input)).toBe(expected);
+});
