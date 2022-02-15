@@ -43,7 +43,11 @@ test.each([
 
 test.each([
   [50, 'L'],
-  [100, 'LL'],
+  [100, 'C'],
+  [200, 'CC'],
+  [500, 'D'],
+  [1000, 'M'],
+  [2000, 'MM'],
 ])('%i -> %i', (input, expected) => {
   expect(convertToRomanNumerals(input)).toBe(expected);
 });
