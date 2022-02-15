@@ -21,7 +21,7 @@ export default function convertToRomanNumerals(input: number): string {
   ];
 
   segments.forEach((segment) => {
-    if (remainder >= segment.amount) {
+    while (remainder >= segment.amount) {
       result += segment.symbol;
       remainder -= segment.amount;
     }

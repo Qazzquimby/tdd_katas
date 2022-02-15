@@ -29,7 +29,15 @@ test.each([
 });
 
 test.each([
+  [20, 'XX'],
+  // [24, 'XXIV'],
+])('%i -> %i', (input, expected) => {
+  expect(convertToRomanNumerals(input)).toBe(expected);
+});
+
+test.each([
   [14, 'XIV'],
+  // [24, 'XXIV'],
 ])('%i -> %i', (input, expected) => {
   expect(convertToRomanNumerals(input)).toBe(expected);
 });
