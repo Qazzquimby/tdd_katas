@@ -16,6 +16,8 @@ export default function convertToRomanNumerals(input: number): string {
   const segments = [
     new RomanNumeralSegment(10, 'X'),
     new RomanNumeralSegment(9, 'IX'),
+    new RomanNumeralSegment(5, 'V'),
+    new RomanNumeralSegment(4, 'IV'),
   ];
 
   segments.forEach((segment) => {
@@ -24,16 +26,6 @@ export default function convertToRomanNumerals(input: number): string {
       remainder -= segment.amount;
     }
   });
-
-  if (remainder === 4) {
-    result += 'IV';
-    remainder -= 4;
-  }
-
-  if (remainder >= 5) {
-    result += 'V';
-    remainder -= 5;
-  }
 
   result += 'I'.repeat(remainder);
 
